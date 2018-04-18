@@ -1,7 +1,14 @@
-Fn_Gear_CompatibleMagazines = {
+
+
+
+private _var = player;
+
+Fn_Gear_CompatibleMagazines =
+{
 	private _cls = configFile >> "CfgWeapons" >> _this;
 	private _res = [];
-	{_res pushBack (if (_x == "this")
+	{
+		_res pushBack (if (_x == "this")
 		then {getArray(_cls >> "magazines")}
 		else {getArray(_cls >> _x >> "magazines")});
 	} forEach getArray(_cls >> "muzzles");
@@ -9,7 +16,6 @@ Fn_Gear_CompatibleMagazines = {
 	_res
 };
 
-private _myMan = player;
 {
 	if (count _x > 0) then
 	{
@@ -17,13 +23,13 @@ private _myMan = player;
 			{
 			    if (count _x > 0) then
 			    	{
-					_myMan removeMagazine (_x select 0)
+					_var removeMagazine (_x select 0)
 				}
 			} foreach (_x call Fn_Gear_CompatibleMagazines)
 		}
 	}
 
-} forEach [primaryWeapon _myMan, secondaryWeapon _myMan, handgunWeapon _myMan];
+} forEach [primaryWeapon _var, secondaryWeapon _var, handgunWeapon _var];
 
 {
 	if (count _x > 0) then
@@ -31,8 +37,8 @@ private _myMan = player;
 		{
 			if (count _x > 0) then
 			{
-				_myMan addMagazines [(_x select 0), 3]
+				_var addMagazines [(_x select 0), 3]
 			}
 		} foreach (_x call Fn_Gear_CompatibleMagazines)
 	}
-} forEach [primaryWeapon _myMan, secondaryWeapon _myMan, handgunWeapon _myMan];
+} forEach [primaryWeapon _var, secondaryWeapon _var, handgunWeapon _var];
