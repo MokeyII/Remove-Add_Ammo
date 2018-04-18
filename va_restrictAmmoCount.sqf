@@ -1,9 +1,9 @@
 // ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
-//	@file Version: 1.1
-//	@file Name: boatSpawning.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy, AgentRev
+//	@file Version: 1.0
+//	@file Name: va_restrictAmmoCount.sqf
+//	@file Author: [FRAC] Mokey
 //	@file Created: 4/18/2018 17:48
 
 private _var = player;
