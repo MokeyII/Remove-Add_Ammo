@@ -6,7 +6,6 @@
 //	@file Author: [404] Deadbeat, [404] Costlyy, AgentRev
 //	@file Created: 4/18/2018 17:48
 
-
 private _var = player;
 
 Fn_Gear_CompatibleMagazines =
