@@ -1,4 +1,10 @@
-
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Version: 1.1
+//	@file Name: boatSpawning.sqf
+//	@file Author: [404] Deadbeat, [404] Costlyy, AgentRev
+//	@file Created: 4/18/2018 17:48
 
 
 private _var = player;
@@ -37,7 +43,7 @@ Fn_Gear_CompatibleMagazines =
 		{
 			if (count _x > 0) then
 			{
-				_var addMagazines [(_x select 0), 3]
+				_var addMagazines [(_x select 0), 2]
 			}
 		} foreach (_x call Fn_Gear_CompatibleMagazines)
 	}
